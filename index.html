@@ -11,12 +11,14 @@
     <title>Calculadora Simples</title>
   </head>
   <body>
+    <h1>Calculadora Simples</h1>
+
     <div class="grid-container">
       <input type="number" name="view" id="view-input" class="grid-item" />
-      <button id="plus-btn" class="grid-item">+</button>
-      <button id="minus-btn" class="grid-item">-</button>
-      <button id="mult-btn" class="grid-item">x</button>
-      <button id="split-btn" class="grid-item">%</button>
+      <button id="plus-btn" class="grid-item strong-btn">+</button>
+      <button id="minus-btn" class="grid-item strong-btn">-</button>
+      <button id="mult-btn" class="grid-item strong-btn">x</button>
+      <button id="split-btn" class="grid-item strong-btn">%</button>
       <button id="seven-btn" class="grid-item">7</button>
       <button id="eight-btn" class="grid-item">8</button>
       <button id="nine-btn" class="grid-item">9</button>
@@ -31,6 +33,11 @@
       <button id="clear-btn" class="grid-item">C</button>
       <button id="equal-btn" class="grid-item">=</button>
     </div>
-    nada
+    <div>
+      <p id="value-1">Valor 1:</p>
+      <span id="operation">+</span>
+      <p id="value-2">Valor 2:</p>
+      <p id="result">Resultado:</p>
+    </div>
   </body>
 </html>
