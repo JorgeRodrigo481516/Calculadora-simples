@@ -8,3 +8,77 @@ html {
 :root {
   --primaryColor: #3b0db8;
 }
+
+.grid-container {
+  width: 400px;
+  display: grid;
+  grid-template-areas:
+    "view-input view-input view-input view-input"
+    "plus-btn minus-btn mult-btn split-btn"
+    "seven-btn eight-btn nine-btn equal-btn"
+    "four-btn five-btn six-btn equal-btn"
+    "one-btn two-btn three-btn equal-btn"
+    "zero-btn period-btn clear-btn equal-btn";
+  gap: 5px;
+  padding: 15px;
+  border: 2px solid;
+}
+
+.grid-item {
+  width: 100%;
+}
+
+#view-input {
+  grid-area: view-input;
+}
+#plus-btn {
+  grid-area: plus-btn;
+}
+#minus-btn {
+  grid-area: minus-btn;
+}
+#mult-btn {
+  grid-area: mult-btn;
+}
+#split-btn {
+  grid-area: split-btn;
+}
+#nine-btn {
+  grid-area: nine-btn;
+}
+#eight-btn {
+  grid-area: eight-btn;
+}
+#seven-btn {
+  grid-area: seven-btn;
+}
+#six-btn {
+  grid-area: six-btn;
+}
+#five-btn {
+  grid-area: five-btn;
+}
+#four-btn {
+  grid-area: four-btn;
+}
+#three-btn {
+  grid-area: three-btn;
+}
+#two-btn {
+  grid-area: two-btn;
+}
+#one-btn {
+  grid-area: one-btn;
+}
+#zero-btn {
+  grid-area: zero-btn;
+}
+#period-btn {
+  grid-area: period-btn;
+}
+#clear-btn {
+  grid-area: clear-btn;
+}
+#equal-btn {
+  grid-area: equal-btn;
+}
