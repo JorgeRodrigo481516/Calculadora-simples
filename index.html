@@ -11,33 +11,42 @@
     <title>Calculadora Simples</title>
   </head>
   <body>
-    <h1>Calculadora Simples</h1>
-
-    <div class="grid-container">
-      <input type="number" name="view" id="view-input" class="grid-item" />
-      <button id="plus-btn" class="grid-item strong-btn">+</button>
-      <button id="minus-btn" class="grid-item strong-btn">-</button>
-      <button id="mult-btn" class="grid-item strong-btn">x</button>
-      <button id="split-btn" class="grid-item strong-btn">%</button>
-      <button id="seven-btn" class="grid-item">7</button>
-      <button id="eight-btn" class="grid-item">8</button>
-      <button id="nine-btn" class="grid-item">9</button>
-      <button id="four-btn" class="grid-item">4</button>
-      <button id="five-btn" class="grid-item">5</button>
-      <button id="six-btn" class="grid-item">6</button>
-      <button id="one-btn" class="grid-item">1</button>
-      <button id="two-btn" class="grid-item">2</button>
-      <button id="three-btn" class="grid-item">3</button>
-      <button id="zero-btn" class="grid-item">0</button>
-      <button id="period-btn" class="grid-item">.</button>
-      <button id="clear-btn" class="grid-item">C</button>
-      <button id="equal-btn" class="grid-item">=</button>
-    </div>
-    <div>
-      <p id="value-1">Valor 1:</p>
-      <span id="operation">+</span>
-      <p id="value-2">Valor 2:</p>
-      <p id="result">Resultado:</p>
-    </div>
+    <header>
+      <h1>Calculadora Simples</h1>
+    </header>
+    <main>
+      <article class="grid-container calculator">
+        <input type="number" name="view" id="view-input" class="grid-item" />
+        <button id="plus-btn" class="grid-item strong-btn">&plus;</button>
+        <button id="minus-btn" class="grid-item strong-btn">&minus;</button>
+        <button id="mult-btn" class="grid-item strong-btn">&times;</button>
+        <button id="divide-btn" class="grid-item strong-btn">&divide;</button>
+        <button id="seven-btn" class="grid-item">7</button>
+        <button id="eight-btn" class="grid-item">8</button>
+        <button id="nine-btn" class="grid-item">9</button>
+        <button id="four-btn" class="grid-item">4</button>
+        <button id="five-btn" class="grid-item">5</button>
+        <button id="six-btn" class="grid-item">6</button>
+        <button id="one-btn" class="grid-item">1</button>
+        <button id="two-btn" class="grid-item">2</button>
+        <button id="three-btn" class="grid-item">3</button>
+        <button id="zero-btn" class="grid-item">0</button>
+        <button id="period-btn" class="grid-item">.</button>
+        <button id="clear-btn" class="grid-item">C</button>
+        <button id="equal-btn" class="grid-item">&equals;</button>
+      </article>
+      <div>
+        <p>Valor 1:<span id="value-one"></span></p>
+        <span id="operation">x</span>
+        <p>Valor 2: <span id="value-2"></span></p>
+        <p>Resultado: <span id="result"></span></p>
+      </div>
+    </main>
+    <span class="made-by"
+      >feito por:
+      <a href="https://www.instagram.com/_rodrigo.buonomo" target="_blank"
+        >Rodrigo Buonomo</a
+      ></span
+    >
   </body>
 </html>

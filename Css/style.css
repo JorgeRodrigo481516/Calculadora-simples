@@ -1,14 +1,15 @@
 /* font-family: 'Lobster', cursive; */
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
-html {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 62, 5%;
 }
 
-:root {
+html {
+  font-size: 62.5%;
+
   --primaryColor: rgba(59, 13, 184, 0.945);
   --secundaryColor: rgba(250, 235, 215, 0.945);
   --strongBtnColor: rgba(44, 38, 59, 0.945);
@@ -18,34 +19,52 @@ html {
 body {
   min-height: 100vh;
 
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 
   background: linear-gradient(
     to bottom,
-    var(--primaryColor) 0,
+    var(--primaryColor),
     var(--secundaryColor)
   );
 }
 
+div {
+  display: flex;
+  flex-direction: column;
+}
+
 h1 {
-  font-size: min(3rem, 9vw);
+  font-size: min(4rem, 9vw);
   font-family: var(--headerOneText);
 }
 
 p {
-  position: relative;
-  left: -30px;
+  width: 100%;
+
+  padding: 5px;
+  border-radius: 10px;
+
+  background-color: var(--primaryColor);
+  color: aliceblue;
+}
+
+p:hover {
+  filter: contrast(70%);
 }
 
 p,
 #operation {
-  font-size: min(1.5rem, 8vw);
+  margin-top: 20px;
+  font-size: min(2.6rem, 8vw);
   font-weight: 700;
 }
 
 ::selection {
-  background-color: var(--secundaryColor);
+  background-color: black;
+  color: aliceblue;
 }
 
 .grid-container {
@@ -56,7 +75,7 @@ p,
   grid-auto-columns: 1fr;
   grid-template-areas:
     "view-input view-input view-input view-input"
-    "plus-btn minus-btn mult-btn split-btn"
+    "plus-btn minus-btn mult-btn divide-btn"
     "seven-btn eight-btn nine-btn equal-btn"
     "four-btn five-btn six-btn equal-btn"
     "one-btn two-btn three-btn equal-btn"
@@ -71,12 +90,35 @@ p,
   box-shadow: 7px 6px 5px, inset 4px 3px 20px whitesmoke;
 }
 
+.grid-item {
+  padding: 5px;
+}
+
 .grid-item:hover {
   filter: contrast(300%);
 }
 
 .strong-btn {
   background-color: var(--strongBtnColor);
+  color: aliceblue;
+}
+
+.made-by {
+  position: absolute;
+  left: 0;
+
+  font-size: 2.8rem;
+  font-family: "Lobster", cursive;
+
+  writing-mode: vertical-lr;
+  text-decoration: underline;
+}
+
+.made-by a {
+  color: var(--primaryColor);
+}
+
+.made-by a:hover {
   color: aliceblue;
 }
 
@@ -87,7 +129,14 @@ p,
 
 #view-input {
   grid-area: view-input;
+
   outline: none;
+}
+
+#view-input::-webkit-inner-spin-button {
+  margin: 0;
+
+  appearance: none;
 }
 
 #plus-btn {
@@ -99,8 +148,8 @@ p,
 #mult-btn {
   grid-area: mult-btn;
 }
-#split-btn {
-  grid-area: split-btn;
+#divide-btn {
+  grid-area: divide-btn;
 }
 #nine-btn {
   grid-area: nine-btn;
