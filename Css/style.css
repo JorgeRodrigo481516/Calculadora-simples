@@ -120,6 +120,7 @@ p,
 
 .made-by a:hover {
   color: aliceblue;
+  text-shadow: 3px -2px 10px black;
 }
 
 #result {
@@ -191,4 +192,15 @@ p,
   grid-area: equal-btn;
   background-color: var(--primaryColor);
   color: aliceblue;
+}
+
+@media screen and (min-width: 820px) {
+  .made-by {
+    writing-mode: horizontal-tb;
+
+    position: sticky;
+    bottom: 0;
+
+    min-width: 95%;
+  }
 }
