@@ -98,7 +98,7 @@ p,
   filter: contrast(300%);
 }
 
-.strong-btn {
+.operation-btn {
   background-color: var(--strongBtnColor);
   color: aliceblue;
 }
