@@ -12,7 +12,7 @@ html {
 
   --primaryColor: rgba(59, 13, 184, 0.945);
   --secundaryColor: rgba(250, 235, 215, 0.945);
-  --strongBtnColor: rgba(44, 38, 59, 0.945);
+  --strongBtnColor: rgba(121, 76, 205, 0.925);
   --headerOneText: "Lobster", cursive;
 }
 
@@ -31,13 +31,17 @@ body {
   );
 }
 
+main {
+  padding-inline: 10px;
+}
+
 div {
   display: flex;
   flex-direction: column;
 }
 
 h1 {
-  font-size: min(4rem, 9vw);
+  font-size: min(4rem, 10vw);
   font-family: var(--headerOneText);
 }
 
@@ -48,7 +52,7 @@ p {
   border-radius: 10px;
 
   background-color: var(--primaryColor);
-  color: aliceblue;
+  color: var(--secundaryColor);
 }
 
 p:hover {
@@ -58,18 +62,23 @@ p:hover {
 p,
 #operation {
   margin-top: 20px;
+
   font-size: min(2.6rem, 8vw);
   font-weight: 700;
 }
 
 ::selection {
   background-color: black;
-  color: aliceblue;
+  color: var(--secundaryColor);
 }
 
 .grid-container {
   max-width: 300px;
   min-height: 200px;
+
+  padding: 15px;
+  border: 2px solid;
+  border-radius: 5px;
 
   display: grid;
   grid-auto-columns: 1fr;
@@ -82,16 +91,13 @@ p,
     "zero-btn period-btn clear-btn equal-btn";
   gap: 5px;
 
-  padding: 15px;
-  border: 2px solid;
-  border-radius: 5px;
-
   background-color: antiquewhite;
   box-shadow: 7px 6px 5px, inset 4px 3px 20px whitesmoke;
 }
 
 .grid-item {
   padding: 5px;
+  cursor: pointer;
 }
 
 .grid-item:hover {
@@ -100,18 +106,19 @@ p,
 
 .operation-btn {
   background-color: var(--strongBtnColor);
-  color: aliceblue;
+  color: var(--secundaryColor);
 }
 
 .made-by {
+  min-width: 95%;
+
   position: absolute;
-  left: 0;
+  bottom: 10px;
 
   font-size: 2.8rem;
   font-family: "Lobster", cursive;
-
-  writing-mode: vertical-lr;
   text-decoration: underline;
+  writing-mode: horizontal-tb;
 }
 
 .made-by a {
@@ -119,13 +126,61 @@ p,
 }
 
 .made-by a:hover {
-  color: aliceblue;
+  color: var(--secundaryColor);
   text-shadow: 3px -2px 10px black;
 }
 
+#refresh-btn {
+  padding: 5px 45px;
+  border-radius: 5px;
+
+  font-family: "Lobster", cursive;
+
+  filter: opacity(30%);
+  cursor: pointer;
+  transition: all 1s ease-out;
+}
+
+#refresh-btn:hover {
+  filter: opacity(90%);
+}
+
+#error-msg {
+  width: 100%;
+  max-width: 200px;
+
+  margin-top: -10px;
+  padding: 2px;
+
+  filter: opacity(0%);
+
+  font-size: min(1.6rem, 5vw);
+  font-weight: 700;
+  text-align: center;
+  text-shadow: -1px -1px 10px black;
+
+  color: red;
+
+  transition: all 0.5s ease-out;
+}
+
+#value-one,
+#value-two {
+  min-width: 60%;
+
+  display: inline-block;
+
+  text-align: right;
+}
+
 #result {
+  min-width: 30%;
+
+  display: inline-block;
+
   font-family: "Courier New", Courier, monospace;
   font-weight: 900;
+  text-align: right;
 }
 
 #view-input {
@@ -194,13 +249,18 @@ p,
   color: aliceblue;
 }
 
-@media screen and (min-width: 820px) {
+@media screen and (max-width: 820px) {
   .made-by {
-    writing-mode: horizontal-tb;
+    position: absolute;
+    left: 0;
+    bottom: auto;
 
-    position: sticky;
-    bottom: 0;
+    writing-mode: vertical-lr;
+  }
+}
 
-    min-width: 95%;
+@media screen and (max-width: 300px) {
+  .made-by {
+    display: none;
   }
 }

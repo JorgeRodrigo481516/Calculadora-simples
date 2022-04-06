@@ -17,12 +17,10 @@
     <main>
       <article class="grid-container calculator">
         <input type="number" name="view" id="view-input" class="grid-item" />
-        <button id="plus-btn" class="grid-item operation-btn">&plus;</button>
-        <button id="minus-btn" class="grid-item operation-btn">&minus;</button>
-        <button id="mult-btn" class="grid-item operation-btn">&times;</button>
-        <button id="divide-btn" class="grid-item operation-btn">
-          &divide;
-        </button>
+        <button id="plus-btn" class="grid-item operation-btn">+</button>
+        <button id="minus-btn" class="grid-item operation-btn">-</button>
+        <button id="mult-btn" class="grid-item operation-btn">x</button>
+        <button id="divide-btn" class="grid-item operation-btn">÷</button>
         <button id="zero-btn" class="grid-item number-btn">0</button>
         <button id="one-btn" class="grid-item number-btn">1</button>
         <button id="two-btn" class="grid-item number-btn">2</button>
@@ -38,9 +36,10 @@
         <button id="equal-btn" class="grid-item">&equals;</button>
       </article>
       <div>
-        <p>Valor 1:<span id="value-one"></span></p>
+        <p>Valor: <span id="value-one"></span></p>
         <span id="operation"></span>
-        <p>Valor 2: <span id="value-2"></span></p>
+        <p>Valor: <span id="value-two"></span></p>
+        <span id="error-msg">ERROR: </span>
         <p>Resultado: <span id="result"></span></p>
       </div>
     </main>
@@ -50,5 +49,6 @@
         >Rodrigo Buonomo</a
       >
     </span>
+    <button id="refresh-btn">Recarregar</button>
   </body>
 </html>
